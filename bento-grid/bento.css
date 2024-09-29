@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  line-height: 25px;
+  letter-spacing: -1px;
+}
+div {
+  border-radius: 10px;
+  overflow: hidden;
+}
+img {
+  width: 300px;
+}
+.hero {
+  margin: 40px 350px;
+
+  font-size: 25px;
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, 200px);
+
+  grid-template-areas:
+    "create-post five-star five-star schedule-post"
+    "ai-content multiple-platform consistent-schedule schedule-post"
+    "ai-content audience-growth grow-followers grow-followers";
+  gap: 20px;
+}
+.create-post {
+  background-color: antiquewhite;
+  grid-area: create-post;
+
+  height: 300px;
+  font-size: 25px;
+
+  font-weight: 400;
+  padding: 50px 19px;
+}
+.create-post > img {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.ai-content {
+  background-color: rgb(243, 179, 3);
+  grid-area: ai-content;
+  font-weight: bolder;
+  margin-top: 100px;
+  padding: 20px 19px;
+}
+.ai-content > img {
+  width: 150px;
+  margin-top: 50px;
+}
+.five-star {
+  background-color: rgb(144, 0, 255);
+  grid-area: five-star;
+  font-size: 40px;
+  color: white;
+  padding: 20px 19px;
+  text-align: center;
+}
+.five-star > img {
+  width: 140px;
+  margin-top: 20px;
+}
+.five-star > #p1 {
+  height: 70px;
+  line-height: 1;
+}
+.five-star > #p2 {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+.multiple-platform {
+  background-color: rgb(238, 242, 242);
+  grid-area: multiple-platform;
+  padding: 20px 19px;
+  font-size: smaller;
+}
+.multiple-platform > img {
+  width: 230px;
+}
+.multiple-platform > p {
+  margin-top: 20px;
+}
+.audience-growth {
+  background-color: rgb(238, 242, 242);
+  grid-area: audience-growth;
+  padding: 20px 19px;
+}
+.audience-growth > img {
+  width: 125px;
+  margin-top: 30px;
+}
+.audience-growth > p {
+  font-size: 45px;
+}
+.audience-growth > span {
+  font-size: small;
+}
+.consistent-schedule {
+  background-color: rgb(243, 179, 3);
+  grid-area: consistent-schedule;
+  padding: 20px 19px;
+}
+.consistent-schedule > p {
+  font-weight: 300;
+}
+.consistent-schedule > img {
+  width: 150px;
+  margin-top: 15px;
+}
+.schedule-post {
+  background-color: rgb(112, 169, 238);
+  grid-area: schedule-post;
+  padding: 20px 19px;
+}
+.schedule-post > img {
+  width: 270px;
+  margin: 10px 0px;
+}
+.schedule-post > .sp1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.schedule-post > .sp2 {
+  font-size: 15px;
+  line-height: 1;
+}
+.grow-followers {
+  background-color: rgb(144, 0, 255);
+  grid-area: grow-followers;
+
+  color: white;
+  padding: 20px 19px;
+  display: flex;
+  align-items: center;
+}
+.grow-followers > span {
+  font-size: larger;
+  font-weight: 400;
+}
+.grow-followers > img {
+  width: 150px;
+}
+
+/*----------------------------------------- media Queries -------------------------------------- */
+
+/* 940-960 */
+@media screen and (max-width: 960px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+
+    grid-template-areas:
+      "five-star"
+      "multiple-platform"
+      "consistent-schedule"
+      "grow-followers"
+      "audience-growth"
+      "schedule-post"
+      "create-post"
+      "ai-content";
+    gap: 20px;
+  }
+
+  .five-star > #p1 {
+    height: 120px;
+    line-height: 1;
+    font-weight: 400;
+  }
+  .multiple-platform {
+    font-size: large;
+  }
+  .multiple-platform > p {
+    margin-top: 0;
+  }
+  .consistent-schedule {
+    padding: 20px 20px 0px 20px;
+  }
+  .consistent-schedule > p {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  .audience-growth {
+    line-height: 35px;
+    padding-bottom: 0px;
+  }
+  .audience-growth > span {
+    font-size: large;
+  }
+
+  .grow-followers {
+    display: flex;
+    flex-direction: column;
+  }
+  .grow-followers > img {
+    width: 175px;
+  }
+  .grow-followers > span {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .schedule-post > .sp2 {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1;
+  }
+  .create-post {
+    font-size: 23px;
+    height: auto;
+  }
+  .ai-content {
+    margin-top: 0%;
+  }
+  .ai-content > img {
+    width: 190px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    width: 260px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    width: 260px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .hero {
+    width: 260px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    width: 76%;
+    margin: auto;
+  }
+}
